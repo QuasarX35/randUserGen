@@ -1,0 +1,76 @@
+# DEFAULTS
+
+default_output_file:users.txt
+default_num_users:10
+default_minimum_age:18
+default_maximum_age:80
+default_id_format:ST{:03}
+default_dob_format:%Y-%m-%d
+default_replace_spaces:True
+default_space_char:_
+default_data_format:{id}, {name}, {email}, {username}, {password}, {gender}, {phone_number} {ic_number}, {dob}, {address}
+
+
+# CONFIGURATIONS
+
+# name of output file
+# FORMAT: <filename>.txt
+output_file:users.txt
+
+
+# number of users to generate
+# FORMAT: <integer number>
+num_users:10
+
+
+# minimum age of user
+# FORMAT: <integer number>
+minimum_age:18
+
+
+# maximum age of user
+# FORMAT: <integer number>
+maximum_age:80
+
+
+# format of the user ID
+# example 1: DC{:03} = 'DCxxx', where 'xxx' is an incrementing number
+# example 2: AB{:04}CD = 'ABxxxxCD'
+# FORMAT: <anything>
+id_format:ST{:03}
+
+
+# format of the date of birth
+# %Y: year
+# %m: month
+# %d: day
+# example 1: %Y/%m/%d = '2004/04/15'
+# example 2: %
+# FORMAT: %Y<anything>%m<anything>%d<anything> (positions of %Y, %m and %d can be changed around)
+dob_format:%Y-%m-%d
+
+
+# toggle True or False to replace the spaces in the user's names and addresses
+# FORMAT: True OR False only
+replace_spaces:True
+
+
+# the replacing character for the spaces in the names and addresses
+# example 1: -, 'John Wick' -> 'John-Wick'
+# example 2: ~, 'Abigail William Smith' -> 'Abigail~William~Smith'
+# FORMAT: <anything>
+space_char:_
+
+
+# the format of the data that you want in the output file
+# you may exclude any attributes that you might not want
+
+# example 1: {email}/{phone_number}/{username}/{password} -> 'john@mail.my/01234556788/johnWick/jw132'
+# example 2: IC Number: {ic_number}\nEmail: {email}\nPhone Number: {phone_number}\nDate of Birth: {dob} ->
+# IC Number: 782343-32-5231
+# Email: abby@mail.edu.my
+# Phone Number: 0658392348
+# Date of Birth: 1958/04/17
+
+# FORMAT: {attr1}<anything>{attr2}<anything>{attr3}...
+data_format:{id} {name} {email} {username} {password} {gender} {phone_number} {ic_number} {dob} {address}
