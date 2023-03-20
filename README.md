@@ -1,5 +1,20 @@
 This Python code generates random Malaysian names and attributes, creates random NRIC numbers based on the date of birth and gender, and writes the generated data to a file. It also reads configuration options from a text file.
 
+# Steps to Use
+Here are the steps to use the script:
+
+1. Install the required Python libraries - requests, BeautifulSoup, faker
+pip install requests beautifulsoup4 Faker
+
+2. Download the script and create a configuration file named "config.txt" in the same directory as the script.
+
+3. Define the configuration options in the "config.txt" file. The options include the number of users to generate, the format for the user IDs, whether to replace spaces in names with a specified character, and the character to replace spaces with. The configuration file has a specific format described in the function parse_config().
+
+4. Call the script by running it from the command line:
+python script.py
+
+5. The script will generate fake personal details including name, gender, and NRIC number for the specified number of users. The script will output the results to the console.
+
 # Libraries Used
 The following Python libraries are used in this code:
 
@@ -57,3 +72,4 @@ Default values are stored in a separate dictionary and are used when a key is no
 
 # Note
 This code was tested with Python version 3.9.7.
+The script uses web scraping techniques to generate fake personal details, so it may be affected by changes to the website structure. The script should not be used for any illegal or unethical purposes.
